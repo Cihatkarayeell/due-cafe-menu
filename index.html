@@ -5,10 +5,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title></title>
-  <meta http-equiv="refresh" content="0; url=./menu.pdf">
+  <meta name="theme-color" content="#25251f">
+
+  <title>Menümüz | DUE Cafe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, #77735c 0%, transparent 45%),
+        radial-gradient(circle at 80% 85%, #625443 0%, transparent 45%),
+        linear-gradient(135deg, #292a24, #464438, #25251f);
+      color: #f5f0e7;
+    }
+
+    /* Gren efekti */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.13;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+
+    .container {
+      width: 90%;
+      max-width: 520px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 65px 35px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.055);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 4px;
+      box-shadow: 0 25px 80px rgba(0,0,0,.18);
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c7bda9;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(64px, 12vw, 92px);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .description {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: rgba(245,240,231,.7);
+      line-height: 1.8;
+      margin-bottom: 42px;
+    }
+
+    .menu-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      min-width: 220px;
+      padding: 17px 25px;
+      color: #292a24;
+      background: #e8dfce;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all .35s ease;
+    }
+
+    .menu-link:hover {
+      background: #fffaf0;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+
+    .arrow {
+      font-size: 17px;
+      transition: transform .3s ease;
+    }
+
+    .menu-link:hover .arrow {
+      transform: translateX(5px);
+    }
+
+    .bottom-text {
+      margin-top: 55px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: rgba(245,240,231,.45);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 55px 20px;
+      }
+
+      .description {
+        font-size: 11px;
+      }
+
+      .bottom-text {
+        margin-top: 40px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <a href="./menu.pdf"></a>
+
+  <main class="container">
+
+    <p class="eyebrow">DUE CAFE</p>
+
+    <h1>Menümüz</h1>
+
+    <p class="description">
+      Her yudumda ayrı bir hikâye.<br>
+      Lezzetlerimizi keşfetmeye davetlisin.
+    </p>
+
+    <a href="./menu.pdf" target="_blank" class="menu-link">
+      Menüyü Keşfet
+      <span class="arrow">→</span>
+    </a>
+
+    <p class="bottom-text">
+      Coffee · Taste · Experience
+    </p>
+
+  </main>
+
 </body>
 </html>
